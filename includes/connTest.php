@@ -7,11 +7,12 @@
   DB::$throw_exception_on_error = true;
    
   try {
-    $results = DB::query("SELECT * FROM clients");
+    $results = DB::query("SELECT * FROM projects");
     foreach ($results as $row){
-      echo 'Client ID = ' , $row['id'] , '<br>';
-      echo 'Client Name = ' , $row['name'] , '<br>';
-      echo 'Client MemberID = ' , $row['memberID'] , '<br>';
+      echo 'Project ID = ' , $row['id'] , '<br>';
+      echo 'Project Name = ' , $row['name'] , '<br>';
+      echo 'Color = ' , $row['color'] , '<br>';
+      echo 'ClientID = ' , $row['clientID'] , '<br>';
     };
   } catch(MeekroDBException $e) {
     echo "Error: " . $e->getMessage() . "<br>\n"; // something about duplicate keys

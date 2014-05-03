@@ -19,22 +19,22 @@
 
         <section id="admin">
           <div class="row">
-            <div class="large-12 columns">
+            <div class="large-8 large-offset-2 columns">
                 <a class="button expand" data-reveal-id="clientModal" data-reveal>Create Client</a>
             </div>
-            <div class="large-12 columns">
+            <div class="large-8 large-offset-2 columns">
                 <a class="button expand" data-reveal-id="projectModal" data-reveal>Create Project</a>
             </div>
-            <div class="large-12 columns">
+            <div class="large-8 large-offset-2 columns">
                 <a href="create-task.php" class="button expand" >Create Task</a>
             </div>
-            <div class="large-12 columns">
+            <div class="large-8 large-offset-2 columns">
                 <a href="create-role.php" class="button expand" >Create Role</a>
             </div>
-            <div class="large-12 columns">
+            <div class="large-8 large-offset-2 columns">
                 <a href="edit-profile.php" class="button expand success" >Edit Profile</a>
             </div>
-            <div class="large-12 columns">
+            <div class="large-8 large-offset-2 columns">
                 <a href="includes/logout.php" class="button expand alert" >Log Out</a>
             </div>
           </div>
@@ -59,14 +59,14 @@
 
         <div id="projectModal" class="reveal-modal" data-reveal>
             <form action="" id="createProject_form">
-              <div class="row">
-                <div class="large-12 columns" id="addProjectInputArea">
+              <div class="row" id="addProjectInputArea">
+                <div class="large-12 columns">
                   <label>Project Name : <input type="text" placeholder="Project Name" name="projectName" id="projectName" required></label>
                 </div>
                 <div class="large-12 columns">
                   <label>Client:
                     <select>
-                      <option value="- Select Client -">- Select Value -</option>
+                      <option value="- Select Project -">- Select Value -</option>
                       <?php
                         foreach ($client as $clientName) {
                           echo'<option value="'. $clientName["name"] .'" data-id="'. $clientName["id"] .'">'. $clientName["name"] .'</option>';
@@ -74,6 +74,20 @@
                       ?>
                     </select>
                   </label>
+                  <?php
+                    function gwsc() {
+                      $cs = array('00', '33', '66', '99', 'CC', 'FF');
+                      for($i=0; $i<6; $i++) {
+                        for($j=0; $j<6; $j++) {
+                          for($k=0; $k<6; $k++) {
+                            $c = $cs[$i] .$cs[$j] .$cs[$k];
+                            echo "<option value=\"$c\">#$c</option>\n";
+                          }
+                        }
+                      }
+                    }
+                  ?>
+                  <select name="colour"><?php gwsc(); ?></select>
                   <input type="text" name="clientID" id="clientID" class="hidden" value="" />
                 </div>
               </div>
