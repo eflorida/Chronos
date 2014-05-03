@@ -37,11 +37,10 @@ $(document).ready(function(){
   }); // END ajax function
   // ---------------------------------------------------------------------------------
 
-  // --------- Add Project ---------
+  // --------- Create Client ---------
   $('#btnAddProject').on('click', function() {
-    var projectForm = $('#createProject_form');
     var projectName = $('#projectName').val();
-    var dataString = projectForm.serialize();
+    var dataString = $('form').serialize();
     console.log('dataString: '+ dataString);
     //replace form input with loading GIF
     $('#addProjectInputArea').html('<img src="img/loader.gif" />');
@@ -49,7 +48,7 @@ $(document).ready(function(){
     //submit POST data through AJAX
     var jqxhr = $.post('includes/mkAddProject.php', dataString, function() {
       //if success, replace form with 'client added' message
-      projectForm.html('<div class="row"><div class="large-12 columns"><h3>Project Added!</h3></div></div>');
+      $('#createProject_form').html('<div class="row"><div class="large-12 columns"><h3>Client Added!</h3></div></div>');
       setTimeout(function() {
           $('a.close-reveal-modal').trigger('click');
         }, 800);
