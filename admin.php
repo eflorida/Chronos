@@ -65,7 +65,7 @@
                 </div>
                 <div class="large-12 columns">
                   <label>Client:
-                    <select>
+                    <select name="projectClient" id="projectClient">
                       <option value="- Select Project -">- Select Value -</option>
                       <?php
                         foreach ($client as $clientName) {
@@ -87,7 +87,7 @@
                       }
                     }
                   ?>
-                  <select name="colour"><?php gwsc(); ?></select>
+                  <select name="color"><?php gwsc(); ?></select>
                   <input type="text" name="clientID" id="clientID" class="hidden" value="" />
                 </div>
               </div>
