@@ -9,8 +9,8 @@
   try {
     //Insert Meek Query Here
     DB::insert("projects", array(
-      "name"      => $_POST['projectName'],
-      "color"      => $_POST['color'],
+      "projectName"      => $_POST['projectName'],
+      "projectColor"      => $_POST['color'],
       "clientID"  => $_POST['clientID']
   ));
 

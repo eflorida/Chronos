@@ -9,9 +9,9 @@
   try {
     $results = DB::query("SELECT * FROM projects");
     foreach ($results as $row){
-      echo 'Project ID = ' , $row['id'] , '<br>';
-      echo 'Project Name = ' , $row['name'] , '<br>';
-      echo 'Color = ' , $row['color'] , '<br>';
+      echo 'Project ID = ' , $row['projectID'] , '<br>';
+      echo 'Project Name = ' , $row['projectName'] , '<br>';
+      echo 'Color = ' , $row['projectColor'] , '<br>';
       echo 'ClientID = ' , $row['clientID'] , '<br>';
     };
   } catch(MeekroDBException $e) {

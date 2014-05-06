@@ -10,13 +10,20 @@
   
   //load client names and id's for project creation
   try {
-    //Insert Meek Query Here
-    $client = DB::query("SELECT name, id FROM clients");
+    $client = DB::query("SELECT clientName, clientID FROM clients");
 
   } catch(MeekroDBException $e) {
-    echo "Error: " . $e->getMessage() . "<br>\n"; // something about duplicate keys
-    //echo "Variables: client=" . $client;
-    echo "SQL Query: " . $e->getQuery() . "<br>\n"; // INSERT INTO accounts...
+    echo "Error: " . $e->getMessage() . "<br>\n";
+    echo "SQL Query: " . $e->getQuery() . "<br>\n";
+  }
+
+  //load project names and id's for task creation
+  try {
+    $project = DB::query("SELECT projectID, projectName FROM projects");
+
+  } catch(MeekroDBException $e) {
+    echo "Error: " . $e->getMessage() . "<br>\n";
+    echo "SQL Query: " . $e->getQuery() . "<br>\n";
   }
 
   //______________________________________________________________________________________

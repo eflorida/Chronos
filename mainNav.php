@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="large-12 columns">
+  <div class="small-12 columns">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">

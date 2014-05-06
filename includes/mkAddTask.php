@@ -8,14 +8,15 @@
    
   try {
     //Insert Meek Query Here
-    DB::insert("clients", array(
-      "clientName"      => $_POST['clientName'],
-      "memberID"  => $_POST['memberID']
+    DB::insert("tasks", array(
+      "taskName"      => $_POST['taskName'],
+      "projectID"      => $_POST['projectID'],
+      "roleID"  => $_POST['roleID']
   ));
 
   } catch(MeekroDBException $e) {
     echo "Error: " . $e->getMessage() . "<br>\n"; // something about duplicate keys
-    echo "Variables: name=" . $_POST['clientName'] . " memberID=" . $_POST['memberID']; //display post values submitted
+    echo "Variables: taskName=" . $_POST['taskName'] . " projectID=" . $_POST['projectID'] . " roleID=" . $_POST['roleID']; //display post values submitted
     echo "SQL Query: " . $e->getQuery() . "<br>\n"; // INSERT INTO accounts...
   }
    
