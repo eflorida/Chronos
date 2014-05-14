@@ -89,39 +89,27 @@
                     <option value="- Select Project -">- Select Value -</option>
                     <?php
                       foreach ($client as $clientName) {
-                        echo'<option value="'. $clientName["name"] .'" data-id="'. $clientName["id"] .'">'. $clientName["name"] .'</option>';
+                        echo'<option value="'. $clientName['clientName'] .'" data-id="'. $clientName['clientID'] .'">'. $clientName['clientName'] .'</option>';
                       }
                     ?>
                   </select>
                 </label>
-                <?php
-                  function gwsc() {
-                    $cs = array('00', '33', '66', '99', 'CC', 'FF');
-                    for($i=0; $i<6; $i++) {
-                      for($j=0; $j<6; $j++) {
-                        for($k=0; $k<6; $k++) {
-                          $c = $cs[$i] .$cs[$j] .$cs[$k];
-                          echo "<option value=\"$c\">#$c</option>\n";
-                        }
-                      }
-                    }
-                  }
-                ?>
-                <select name="color"><?php gwsc(); ?></select>
                 <input type="text" name="clientID" id="clientID" class="hidden" value="" />
               </div>
               <div class="small-12 columns">
                 <input id="roleSelector" type="checkbox"><label for="roleSelector">Add Billing Categories</label>
-                <div class="row collapse" id="addRoleInput">
-                  <label>Billing Categories</label>
-                  <div class="small-9 columns">
-                    <input type="text" placeholder="billing category" class="newRoleName" />
+                <div class="row collapse hidden" id="addRoleInput">
+                  <div class="row">
+                    <label>Billing Categories</label>
+                    <div class="small-9 columns">
+                      <input type="text" placeholder="billing category" class="newRoleName" />
+                    </div>
+                    <div class="small-3 columns">
+                      <span class="postfix">+</span>
+                    </div>
                   </div>
-                  <div class="small-3 columns">
-                    <span class="postfix">+</span>
-                  </div>
+                  <a class="button" href="#" id="addAnotherRole">Add Another</a>
                 </div>
-                <a class="button" href="" id="addAnotherRole">Add Another</a>
               </div>
             </div>
             <div class="row gifLoader hidden">
@@ -160,7 +148,7 @@
                     <option value="- Select Project -">- Select Value -</option>
                     <?php
                       foreach ($project as $projectName) {
-                        echo'<option value="'. $projectName["name"] .'" data-id="'. $projectName["id"] .'">'. $projectName["name"] .'</option>';
+                        echo'<option value="'. $projectName["projectName"] .'" data-id="'. $projectName["projectID"] .'">'. $projectName["projectName"] .'</option>';
                       }
                     ?>
                   </select>

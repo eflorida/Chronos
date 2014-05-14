@@ -65,10 +65,14 @@ $(document).ready(function(){
   });
 
   //Add billing category
+  $('#roleSelector').on('click', function() {
+    $('#addRoleInput').toggleClass('hidden');
+  });
+
   $('#addAnotherRole').on('click', function() {
     var numRoles = $('.newRoleName').length;
     console.log('number of Roles: '+ numRoles);
-    $('#addRoleInput').append('<div class="small-9 columns"><input type="text" placeholder="billing category" class="newRoleName" /></div><div class="small-3 columns"><span class="postfix">+</span></div>');
+    $('#addRoleInput .row').append('<div class="small-9 columns"><input type="text" placeholder="billing category" class="newRoleName" /></div><div class="small-3 columns"><span class="postfix">+</span></div>');
   });
 
   //Add the project to the database
@@ -77,7 +81,7 @@ $(document).ready(function(){
     var createProject_form  = $('#createProject_form');
     var addProjectInputArea = $('#addProjectInputArea');
     var projectAddSubmit    = $('#projectAddSubmit');
-    var projectAddedText     = $('#projectAddedText');
+    var projectAddedText    = $('#projectAddedText');
     var gifLoader           = $('.gifLoader');
 
     var dataString = $('form#createProject_form').serialize();
