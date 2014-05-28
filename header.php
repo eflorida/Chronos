@@ -6,7 +6,7 @@
     <title>Chronos | Time sheets</title>
 
     <link rel="stylesheet" href="css/foundation.min.css" />
-    <link rel="stylesheet" href="css/jquery.colourPicker.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>

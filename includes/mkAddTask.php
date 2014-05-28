@@ -9,9 +9,8 @@
   try {
     //Insert Meek Query Here
     DB::insert("tasks", array(
-      "taskName"      => $_POST['taskName'],
-      "projectID"      => $_POST['projectID'],
-      "roleID"  => $_POST['roleID']
+      "taskName"    => $_POST['taskName'],
+      "projectID"   => $_POST['projectID']
   ));
 
   } catch(MeekroDBException $e) {

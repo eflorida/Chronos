@@ -9,8 +9,8 @@
   try {
     //Insert Meek Query Here
     DB::insert("clients", array(
-      "clientName"      => $_POST['clientName'],
-      "memberID"  => $_POST['memberID']
+      "clientName"  => $_POST['clientName'],
+      "memberID"    => $_POST['memberID']
   ));
 
   } catch(MeekroDBException $e) {
