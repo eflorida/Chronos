@@ -88,8 +88,8 @@
                   <select id="projectClientSelect">
                     <option value="- Select Project -">- Select Value -</option>
                     <?php
-                      foreach ($client as $clientName) {
-                        echo'<option value="'. $clientName['clientName'] .'" data-id="'. $clientName['clientID'] .'">'. $clientName['clientName'] .'</option>';
+                      foreach ($clients as $thisClient) {
+                        echo'<option value="'. $thisClient['clientName'] .'" data-id="'. $thisClient['clientID'] .'">'. $thisClient['clientName'] .'</option>';
                       }
                     ?>
                   </select>
@@ -147,8 +147,8 @@
                   <select id="taskProjectSelect">
                     <option value="- Select Project -">- Select Value -</option>
                     <?php
-                      foreach ($project as $projectName) {
-                        echo'<option value="'. $projectName["projectName"] .'" data-id="'. $projectName["projectID"] .'">'. $projectName["projectName"] .'</option>';
+                      foreach ($projects as $thisProject) {
+                        echo'<option value="'. $thisProject["projectName"] .'" data-id="'. $thisProject["projectID"] .'">'. $thisProject["projectName"] .'</option>';
                       }
                     ?>
                   </select>
