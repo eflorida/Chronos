@@ -1,57 +1,68 @@
-<?php include 'header.php'; ?> 
+<?php
 
-  <body>
-    
-    <header id="headerSticky" class="fixed">
+    include_once 'includes/dbConnection.php';
+    include_once 'includes/functions.php';
+     
+    sec_session_start();
+     
+    if (login_check($mysqli) == true) {
+        $logged = 'in';
+    } else {
+        $logged = 'out';
+    }
 
-      <?php include 'mainNav.php'; ?>
+    include 'header.php';
+?>
+    <body>
+        <header>
 
-    </header>
-    
-    <section id="why" class="subhead">
-      <div class="row">
-        <div class="small-8 small-offset-2 columns">
-	        <h3>Because filling out your time sheet doesn't have to suck.</h3>
-          <p>We believe in simple solutions. We focus on one problem, to find the single best solution. No compromises, no catch-all solutions.</p>
-          <p>One problem, one solution.</p>
-        </div>
-      </div>
-    </section>
+          <?php include 'appNav.php'; ?>
 
-    <section id="how">
-      <div class="row">
-        <div class="small-4 columns">
-          <h2>Log Your Time</h2>
-          <p>Detailed explenation of the process of logging your time. It is so simple, and real-time, so you don't forget. No more trying to remember when you started working on a particular project.</p>
-        </div>
-        <div class="small-4 columns">
-          <h2>Track Your Progress</h2>
-          <p>Detailed explenation of the process of logging your time. It is so simple, and real-time, so you don't forget. No more trying to remember when you started working on a particular project.</p>
-        </div>
-        <div class="small-4 columns">
-          <h2>Review Your Status</h2>
-          <p>Detailed explenation of the process of logging your time. It is so simple, and real-time, so you don't forget. No more trying to remember when you started working on a particular project.</p>
-        </div>
-      </div>
-    </section>
+          <section id="main-section">
+            <div class="row">
+              <div class="small-12 columns">
+                <?php
+                  if (isset($_GET['error'])) {
+                    echo '<p class="error">Error Logging In!</p>';
+                  }
+                ?> 
+                  <h3>Welcome to Time Kor</h3>
+              </div>
+              <div class="small-12 columns">
+                  <p>You can use this app to record time sheet data and submit for approval.</p>
+                  <p>Making the time sheet process easier and more intuitive means employees dread it less, they record time more accurately, and submit time sheets on time!</p>
+                  <p>This app integrates directly with Quicktime, saving time when approving and for accounting entry.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-8 small-offset-2 columns panel">
+                <form action="includes/processLogin.php" method="post" name="login_form">
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <label>Email : <input type="email" placeholder="email@address.com" name="email" /> </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 columns">
+                      <label>Password : <input type="password" id="password" name="password" /> </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <input type="button" class="button success" value="Login" onclick="formhash(this.form, this.form.password);" />
+                    </div>
+                  </div>
+                </form>
+                <div class="row">
+                    <div class="small-12 columns">
+                      <p>If you don't have a login, please <a href="register.php">register</a></p>
+                      <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
+                      <p>You are currently logged <?php echo $logged ?>.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+            
 
-    <section id="pricing">
-      <div class="row">
-        <div class="small-3 columns">
-          <ul class="pricing-table"> <li class="title">Solo</li> <li class="price">$.99</li> <li class="description">Available in Apple/Google Stores</li> <li class="bullet-item">1 Database</li> <li class="bullet-item">5GB Storage</li> <li class="bullet-item">20 Users</li> <li class="cta-button"><a class="button" href="#">Buy Now</a></li> </ul>
-        </div>
-        <div class="small-3 columns">
-          <ul class="pricing-table"> <li class="title">Team</li> <li class="price">$19.99</li> <li class="description">Up to 5 users</li> <li class="bullet-item">1 Database</li> <li class="bullet-item">5GB Storage</li> <li class="bullet-item">20 Users</li> <li class="cta-button"><a class="button" href="#">Buy Now</a></li> </ul>
-        </div>
-        <div class="small-3 columns">
-          <ul class="pricing-table"> <li class="title">Small Biz</li> <li class="price">$99.99</li> <li class="description">Up to 25 users</li> <li class="bullet-item">1 Database</li> <li class="bullet-item">5GB Storage</li> <li class="bullet-item">20 Users</li> <li class="cta-button"><a class="button" href="#">Buy Now</a></li> </ul>
-        </div>
-        <div class="small-3 columns">
-          <ul class="pricing-table"> <li class="title">Enterprise</li> <li class="price">$199.99</li> <li class="description">Up to 65 users</li> <li class="bullet-item">1 Database</li> <li class="bullet-item">5GB Storage</li> <li class="bullet-item">20 Users</li> <li class="cta-button"><a class="button" href="#">Buy Now</a></li> </ul>
-        </div>
-      </div>
-    </section>
-
-    <?php include 'footer.php'; ?> 
-    
-    
+<?php include 'footer.php'; ?>

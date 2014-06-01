@@ -4,6 +4,12 @@
 @chrGreen: #7bc13d;
 @chrRed: #c93339;
 
+@korGreen: #1abc9c;
+@korRed: #e74c3c;
+@korYellow: #f1c40f;
+@korGrey: #ebebeb;
+@korText: #4d4d4d;
+
 @colorBG: #ebebeb;
 @colorBase: #666666;
 @colorAccent: #e17f0b;
@@ -83,24 +89,24 @@
 // --------  CSS - Base  --------
 //----------------------------------------------------------------------
 body {
-    color: @colorBase;
+    color: @korText;
     font-family: 'Kameron', Georgia, serif;;
     font-weight: 400;
     .font-remSize (14, 18);
     background: @colorBG;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: @colorBase;
+    color: @korGreen;
     font-family: 'Squada One', Georgia, serif;
     font-weight: 400;
     .font-remSize (22, 28);
 }
 a {
-    color: @chrBlue;
+    color: @korYellow;
     text-decoration: none;
 }
 a:hover {
-    color: (@chrBlue + #222222);
+    color: (@korYellow + #222222);
     text-decoration: none;
 }
 
@@ -117,15 +123,16 @@ a:hover {
 
 // --------  CSS - Modules  --------
 //----------------------------------------------------------------------
+
 #headerSticky {
-    background-color: @chrBlue;
+    background-color: @korGreen;
     .top-bar {
-        background: @chrBlue;
+        background: @korGreen;
     }
     .top-bar-section ul,
     .top-bar-section ul li>a,
     .top-bar-section li:not(.has-form) a:not(.button) {
-        background: @chrBlue;
+        background: @korGreen;
     }
 
     h1 {
@@ -134,19 +141,44 @@ a:hover {
     nav {
         
         a {
-            color: @colorBG;
+            color: #fff;
         }
         a:hover,
         .top-bar-section li:not(.has-form) a:not(.button):hover {
             color: #ffffff;
-            background: (@chrBlue - #111);
+            background: (@korGreen - #111);
         }
     }
     #loginLink {
-        background: @colorAccent;
+        background: @korYellow;
     }
     #loginLink:hover {
-        background: (@colorAccent - #111);
+        background: (@korYellow - #111);
+    }
+}
+
+header {
+    img {
+        max-height: 40px;
+    }
+    .tab-bar, .right-off-canvas-menu {
+        background: (@korGrey - #222);
+    }
+    .right-small {
+        border-left: solid 1px (@korYellow - #222);
+        background: @korYellow;
+    }
+    ul.off-canvas-list {
+        background: @korYellow;
+    }
+    ul.off-canvas-list li a {
+        border-bottom: solid 1px (@korYellow - #222);
+    }
+    ul.off-canvas-list li a:hover {
+        background: (@korYellow - #222);
+    }
+    .off-canvas-wrap .main-section {
+        height: 400px;
     }
 }
 
@@ -160,25 +192,20 @@ a:hover {
     h1, h2, h3 {
         color: #ffffff;
         .font-remSize (40, 50);
-        text-shadow: 3px 3px 0 (@chrGreen - #333333);
+        text-shadow: 3px 3px 0 (@korGrey - #666);
     }
     p {
         color: @colorBG;
         .font-remSize (14, 20);
-        text-shadow: 1px 1px 0 (@chrGreen - #333333);
+        text-shadow: 1px 1px 0 (@korGrey - #999);
     }
 }
-
-section {
+#hwy, #how, #what, #pricing, #main-section {
     margin-top: 44px;
+}
+section {
     clear: both;
-}
-#admin {
-    margin-top: 88px;
-}
-
-#timestampGraph {
-    
+}    
 
 // --------  CSS - Page Specific  --------
 //----------------------------------------------------------------------

@@ -1,26 +1,23 @@
-<div class="row">
-  <div class="small-12 columns">
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
 
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="index.php">Chronos</a></h1>
-        </li>
-      </ul>
+      <section class="middle tab-bar-section">
+        <h1 class="title"><img src="img/kor_logo_small.png" alt="Time Kor Logo" /></h1>
+      </section>
 
-      <div class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li><a href="dashboard.php">Dashboard</a></li>
-          <li><a href="stopwatch.php">Stopwatch</a></li>
-          <li><a href="time.php">Time Entry</a></li>
-          <li><a href="submit.php">Submit</a></li>
-          <li><a href="admin.php">Admin</a></li>
-          <span class="clearFloats"></span>
-        </ul>
-        <span class="clearFloats"></span>
-      </div>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
     </nav>
 
-  </div>
-</div>
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="stopwatch.php">Stopwatch</a></li>
+        <li><a href="time.php">Time Entry</a></li>
+        <li><a href="submit.php">Submit</a></li>
+        <li><a href="admin.php">Admin</a></li>
+      </ul>
+    </aside>
+    

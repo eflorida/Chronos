@@ -11,31 +11,31 @@
 
 <?php if (login_check($mysqli) == true) : ?>
     <body>
-        <header id="headerSticky" class="fixed">
+        <header>
 
           <?php include 'appNav.php'; ?>
 
-        </header>
+          <section id="main-section">
+            <div class="row">
+              <div class="small-8 small-offset-2 columns">
+                  <a class="button expand" data-reveal-id="clientModal" data-reveal>Create Client</a>
+              </div>
+              <div class="small-8 small-offset-2 columns">
+                  <a class="button expand" data-reveal-id="projectModal" data-reveal>Create Project</a>
+              </div>
+              <div class="small-8 small-offset-2 columns">
+                  <a class="button expand" data-reveal-id="taskModal" data-reveal>Create Task</a>
+              </div>
+              <div class="small-8 small-offset-2 columns">
+                  <a href="edit-profile.php" class="button expand success" >Edit Profile</a>
+              </div>
+              <div class="small-8 small-offset-2 end columns">
+                  <a href="includes/logout.php" class="button expand alert" >Log Out</a>
+              </div>
+            </div>
+          </section>
 
-        <section id="admin">
-          <div class="row">
-            <div class="small-8 small-offset-2 columns">
-                <a class="button expand" data-reveal-id="clientModal" data-reveal>Create Client</a>
-            </div>
-            <div class="small-8 small-offset-2 columns">
-                <a class="button expand" data-reveal-id="projectModal" data-reveal>Create Project</a>
-            </div>
-            <div class="small-8 small-offset-2 columns">
-                <a class="button expand" data-reveal-id="taskModal" data-reveal>Create Task</a>
-            </div>
-            <div class="small-8 small-offset-2 columns">
-                <a href="edit-profile.php" class="button expand success" >Edit Profile</a>
-            </div>
-            <div class="small-8 small-offset-2 end columns">
-                <a href="includes/logout.php" class="button expand alert" >Log Out</a>
-            </div>
-          </div>
-        </section>
+        </header>
 
         <div id="clientModal" class="reveal-modal" data-reveal>
             <form action="" id="createClient_form">
@@ -171,9 +171,10 @@
         </div>
 
 <?php else : ?>
-
-  <?php include 'unAuth.php'; ?>
-
+<!-- The user is NOT logged in, so redirect to login page -->
+  <script>
+    window.location.href="http://localhost:8080/chronos/index.php";
+  </script>
 <?php endif; ?>
 
 <?php include 'footer.php'; ?>

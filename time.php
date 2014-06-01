@@ -11,13 +11,11 @@
 
 <?php if (login_check($mysqli) == true) : ?>
     <body>
-        <header id="headerSticky" class="fixed">
+        <header>
 
           <?php include 'appNav.php'; ?>
 
-        </header>
-
-        <section id="time">
+        <section id="main-section">
           <div class="row">
             <form action="" id="createClient_form">
               <div class="row hidden" id="clientAddedText">
@@ -96,9 +94,10 @@
         </section>
 
 <?php else : ?>
-
-  <?php include 'unAuth.php'; ?>
-
+  <!-- The user is NOT logged in, so redirect to login page -->
+  <script>
+    window.location.href="http://localhost:8080/chronos/index.php";
+  </script>
 <?php endif; ?>
 
 <?php include 'footer.php'; ?>

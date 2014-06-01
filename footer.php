@@ -1,4 +1,10 @@
-	<script src="js/vendor/modernizr.js"></script>
+            </section>
+
+            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>
+    <script src="js/vendor/modernizr.js"></script>
     <script src="js/jquery.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="js/foundation/foundation.js"></script>
