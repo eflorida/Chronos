@@ -13,6 +13,7 @@
     <script type="text/JavaScript" src="js/forms.js"></script>
 
     <script type="text/JavaScript" src="js/admin.js"></script>
+    <script type="text/JavaScript" src="js/canvasClock_1.js"></script>
 
 	<script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
@@ -21,12 +22,5 @@
     </script>
     <div class="reveal-modal-bg" style="display: none;"></div>
 
-    <script>
-        $(function() {
-            $( "#progressbar" ).progressbar({
-                value: 37
-            });
-        });
-    </script>
   </body>
 </html>

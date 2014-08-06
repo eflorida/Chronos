@@ -93,12 +93,12 @@
         </div>
 
         <div id="startTModal" class="reveal-modal" data-reveal>
-            <canvas id="startTCanvas" width="360" height="360" style="border:1px solid #1abc9c;"></canvas>
+            <canvas id="startTCanvas" width="300" height="300" style="border:1px solid #e74c3c;"></canvas>
             <a class="close-reveal-modal">&#215;</a>
         </div>
 
         <div id="stopTModal" class="reveal-modal" data-reveal>
-            <canvas id="startTCanvas" width="360" height="360" style="border:1px solid #e74c3c;"></canvas>
+            <canvas id="stopTCanvas" width="360" height="360" style="border:1px solid #e74c3c;"></canvas>
             <a class="close-reveal-modal">&#215;</a>
         </div>
 

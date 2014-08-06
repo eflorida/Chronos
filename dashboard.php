@@ -32,7 +32,7 @@
               <div class="row">
                 <div class="small-12 columns">
                   <div class="progress">
-                    <span class="meter"></span>
+                    <span class="meter" style="width: 37%"></span>
                   </div>
                 </div>
               </div>
@@ -61,16 +61,9 @@
             <div class="small-9 columns">
               <div class="row">
                 <div class="small-12 columns">
-                  <canvas   id      ="canvas-p7"
-                            width   ="500"
-                            height  ="42"
-                            style   ="border:1px solid #dedede;">
-                  </canvas>
-                </div>
-              </div>
-              <div class="row">
-                <div class="small-12 columns">
-                  <div class="progressbar" data-minutes"30"></div>
+                  <div class="progress">
+                    <span class="meter" style="width: 22%"></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -97,7 +90,9 @@
               </div>
               <div class="row">
                 <div class="small-12 columns">
-                  <div class="progressbar" data-minutes"15"></div>
+                  <div class="progress">
+                    <span class="meter" style="width: 66%"></span>
+                  </div>
                 </div>
               </div>
             </div>
