@@ -7,6 +7,7 @@
      
     if (login_check($mysqli) == true) {
         $logged = 'in';
+        header('Location: dashboard.php');
     } else {
         $logged = 'out';
     }

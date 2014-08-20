@@ -17,19 +17,19 @@
 
           <section id="main-section">
             <div class="row">
-              <div class="small-8 small-offset-2 columns">
+              <div class="small-12 medium-8 medium-offset-2 columns">
                   <a class="button expand" data-reveal-id="clientModal" data-reveal>Create Client</a>
               </div>
-              <div class="small-8 small-offset-2 columns">
+              <div class="small-12 medium-8 medium-offset-2 columns">
                   <a class="button expand" data-reveal-id="projectModal" data-reveal>Create Project</a>
               </div>
-              <div class="small-8 small-offset-2 columns">
+              <div class="small-12 medium-8 medium-offset-2 columns">
                   <a class="button expand" data-reveal-id="taskModal" data-reveal>Create Task</a>
               </div>
-              <div class="small-8 small-offset-2 columns">
+              <div class="small-12 medium-8 medium-offset-2 columns">
                   <a href="edit-profile.php" class="button expand success" >Edit Profile</a>
               </div>
-              <div class="small-8 small-offset-2 end columns">
+              <div class="small-12 medium-8 medium-offset-2 end columns">
                   <a href="includes/logout.php" class="button expand alert" >Log Out</a>
               </div>
             </div>
